@@ -1,0 +1,24 @@
+name: risk_modeling_env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - jupyter
+  - pyspark
+  - pyarrow
+  - parquet-cpp
+  - ipykernel
+  - xgboost
+  - lightgbm
+  - tensorflow
+  - keras
+  - pip
+  - streamlit
+  - pip:
+    - pickle5
