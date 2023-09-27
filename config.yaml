@@ -1,0 +1,13 @@
+## Directories
+## Data directory
+data:
+    data_raw: "../data/raw"
+    data_clean: "../data/clean"
+
+
+## Colors:
+colors:
+    rojo: "#ec0c2b"
+    teal: "#1c9c9c"
+    azul: "#043464"
+    gris: "#BFBFBF"
