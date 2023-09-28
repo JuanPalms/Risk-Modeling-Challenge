@@ -3,11 +3,10 @@ This python module defines the global properties for the graphs in matplotlib
 """
 import os
 import matplotlib.pyplot as plt
-from matplotlib.ticker import FuncFormatter  # Importar FuncFormatter
-
+from matplotlib.ticker import FuncFormatter
 
 # Establecer el tamaño predeterminado de la figura
-plt.rcParams["figure.figsize"] = (8, 4)
+plt.rcParams["figure.figsize"] = (10, 5)
 # Establecer fondo transparente de la figura
 plt.rcParams["figure.facecolor"] = "none"
 # Eliminar los ejes superior y derecho
