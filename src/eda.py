@@ -18,9 +18,6 @@ config_name = "config.yaml"
 with open(os.path.join(parent_dir, config_name), encoding="utf-8") as conf:
         config_f = yaml.safe_load(conf)
 
-import matplotlib.pyplot as plt
-
-import matplotlib.pyplot as plt
 
 def graph_categorical(df, variable, title, xticks=None, figsize=(10, 6)):
     """
