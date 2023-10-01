@@ -4,6 +4,7 @@ Module that integrates the fitting process of a logistic regression, random fore
 import os
 import sys
 import yaml
+import logging
 import pickle
 import pandas as pd
 import pyarrow
@@ -14,6 +15,7 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.compose import ColumnTransformer
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import GridSearchCV
+
 
 ###
 from sklearn.metrics import accuracy_score
@@ -28,6 +30,13 @@ config_name = "config.yaml"
 with open(os.path.join(parent_dir, config_name), encoding="utf-8") as conf:
         config_f = yaml.safe_load(conf)
 
+        
+# Configure logfile
+
+log_filename = config_f["logging"]["training"]
+logging.basicConfig(filename=log_filename, 
+                    level=logging.INFO, 
+                    format='%(asctime)s - %(levelname)s - %(message)s')
 ##################### Data ############################################################################
 
 data = pd.read_parquet(os.path.join(config_f["data"]["data_clean"], "datos.parquet"), engine="pyarrow")
@@ -87,10 +96,18 @@ parameters_best_model=grid_search_lr.best_params_
 filename_bm_params = config_f["models"]["logistic_regression"]["params"]
 filename_bm= config_f["models"]["logistic_regression"]["model"]
 
+train_score = best_model.score(X_train, y_train)
+test_score = best_model.score(X_test, y_test)
+
+logging.info(f"Training score \n logistic regression: {train_score:.4f}")
+logging.info(f"Test score\n logistic regression: {test_score:.4f}")
+logging.info(f"Best parameters\n logistic regression: {parameters_best_model}")
 
 with open(filename_bm_params, 'wb') as file_params:
     pickle.dump(parameters_best_model, file_params)
+    logging.info(f"Best parameters saved in: {filename_bm_params}")
 
 
 with open(filename_bm, 'wb') as file_bm:
     pickle.dump(best_model, file_bm)
+    logging.info(f"Best model saved in: {filename_bm}")
