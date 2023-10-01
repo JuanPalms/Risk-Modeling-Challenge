@@ -20,5 +20,6 @@ dependencies:
   - keras
   - pip
   - streamlit
+  - imbalanced-learn
   - pip:
     - pickle5

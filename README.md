@@ -33,3 +33,4 @@ This project contains the code for the risk modeling challenge. It is developed 
     ├── eda.py # Custom functions for the EDA.
     ├── tables.py # Custom function for producing an HTML-like table to display table results.
     └── training.py # Models training pipelines.
+```
