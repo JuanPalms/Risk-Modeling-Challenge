@@ -121,7 +121,6 @@ preprocessor_logistic_regression = ColumnTransformer(
 preprocessed_X_train = preprocessor_logistic_regression.fit_transform(X_train)
 preprocessed_X_test = preprocessor_logistic_regression.transform(X_test)
 
-# Now, instead of manually fitting a logistic model, we will use a pipeline with GridSearchCV
 pipeline = make_pipeline(
     preprocessor_logistic_regression,
     SMOTE(random_state=42),
@@ -130,23 +129,21 @@ pipeline = make_pipeline(
 
 # Parameters for grid search
 param_grid = {
-    'logisticregression__C': [0.5, 1],
+    'logisticregression__C': [0.2, 0.5, 1],
     'logisticregression__solver': ['liblinear', 'saga']
 }
 
-# Setting up GridSearchCV
 grid_search = GridSearchCV(pipeline, param_grid, cv=5, scoring='accuracy')
 grid_search.fit(X_train, y_train)
 
-# Once the grid search is done, we can access the best model and its parameters
+## Fitting model
 best_model = grid_search.best_estimator_
 parameters_best_model = grid_search.best_params_
 
-# Use preprocessed data for model evaluation
 train_score = best_model.score(X_train, y_train)
 test_score = best_model.score(X_test, y_test)
 
-
+## Save model and parameters to disk for replicability
 filename_bm_params = config_f["models"]["logistic_regression"]["params"]
 filename_bm = config_f["models"]["logistic_regression"]["model"]
 
@@ -171,11 +168,9 @@ y_train_pred, y_train_prob = get_predictions_and_probabilities(best_model, X_tra
 y_test_pred, y_test_prob = get_predictions_and_probabilities(best_model, X_test)
 
 
-# Create results DataFrames
 train_results = create_results_dataframe(X_train, y_train, y_train_pred, y_train_prob)
 test_results = create_results_dataframe(X_test, y_test, y_test_pred, y_test_prob)
 
-# Guardar resultados en archivos Parquet
 try:
     train_results_path = os.path.join(config_f['data']['results']['logistic_regression'], 'train_results.parquet')
     test_results_path = os.path.join(config_f['data']['results']['logistic_regression'], 'test_results.parquet')
