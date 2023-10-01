@@ -8,6 +8,17 @@ results:
     graphs: "../results/graphs"
     tables: "../results/tables"
 
+models:
+    logistic_regression:
+        params:  "../models/logistic_regression/logistic_regression_params.pkl"
+        model:   "../models/logistic_regression/logistic_regression_model.pkl"
+    random_forest:
+        params:  "../models/random_forest/random_forest_params.pkl"
+        model:   "../models/random_forest/random_forest_model.pkl"
+    xg_boost:
+        params:  "../models/xgboost/xgboost_params.pkl"
+        model:   "../models/xgboost/xgboost_model.pkl"
+
 
 ## Colors:
 colors:
