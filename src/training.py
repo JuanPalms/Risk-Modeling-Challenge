@@ -38,11 +38,14 @@ logging.basicConfig(filename=log_filename,
                     level=logging.INFO, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
 ##################### Data ############################################################################
+try:
+    data = pd.read_parquet(os.path.join(config_f["data"]["data_clean"], "datos.parquet"), engine="pyarrow")
+except Exception as e:
+    logging.error(f"Error in loading data: {e}")
+    sys.exit(1)
 
-data = pd.read_parquet(os.path.join(config_f["data"]["data_clean"], "datos.parquet"), engine="pyarrow")
 # Define X (independent variables) and y (target variable)
 y = data["target"]
-# Drop target variable from df to be processed
 X = data.drop(columns=["target"], axis=1)
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
@@ -103,11 +106,15 @@ logging.info(f"Training score \n logistic regression: {train_score:.4f}")
 logging.info(f"Test score\n logistic regression: {test_score:.4f}")
 logging.info(f"Best parameters\n logistic regression: {parameters_best_model}")
 
-with open(filename_bm_params, 'wb') as file_params:
-    pickle.dump(parameters_best_model, file_params)
-    logging.info(f"Best parameters saved in: {filename_bm_params}")
+try:
+    with open(filename_bm_params, 'wb') as file_params:
+        pickle.dump(parameters_best_model, file_params)
+        logging.info(f"Best parameters saved in: {filename_bm_params}")
 
 
-with open(filename_bm, 'wb') as file_bm:
-    pickle.dump(best_model, file_bm)
-    logging.info(f"Best model saved in: {filename_bm}")
+    with open(filename_bm, 'wb') as file_bm:
+        pickle.dump(best_model, file_bm)
+        logging.info(f"Best model saved in: {filename_bm}")
+except Exception as e:
+    logging.error(f"Error in saving model and parameters: {e}")
+    sys.exit(1)

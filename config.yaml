@@ -8,6 +8,9 @@ results:
     graphs: "../results/graphs"
     tables: "../results/tables"
 
+logging:
+    training: "../logs/training_logs.log"
+
 models:
     logistic_regression:
         params:  "../models/logistic_regression/logistic_regression_params.pkl"
