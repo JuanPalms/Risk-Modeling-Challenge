@@ -1,0 +1,33 @@
+2023-10-02 13:37:09,383 - INFO - Fitted preprocessor saved in: ../models/random_forest/random_forest_preprocessor.pkl
+2023-10-02 13:37:09,384 - INFO - Training score 
+ random forest: 0.8424
+2023-10-02 13:37:09,384 - INFO - Test score
+ random forest: 0.8056
+2023-10-02 13:37:09,384 - INFO - Parameters
+ random forest: {'xgbclassifier__colsample_bytree': 0.8, 'xgbclassifier__learning_rate': 0.1, 'xgbclassifier__max_depth': 15, 'xgbclassifier__n_estimators': 50, 'xgbclassifier__subsample': 0.3}
+2023-10-02 13:37:09,384 - INFO - Parameters saved in: ../models/random_forest/random_forest_params.pkl
+2023-10-02 13:37:09,386 - INFO - Model saved in: ../models/random_forest/random_forest_model.pkl
+2023-10-02 13:37:09,456 - INFO - Train results saved in: ../data/results/random_forest/train_results.parquet
+2023-10-02 13:37:09,456 - INFO - Test results saved in: ../data/results/random_forest/test_results.parquet
+2023-10-02 14:30:42,860 - INFO - Fitted preprocessor saved in: ../models/xgboost/xgboost_preprocessor.pkl
+2023-10-02 14:30:42,860 - INFO - Training score 
+ random forest: 0.8424
+2023-10-02 14:30:42,860 - INFO - Test score
+ random forest: 0.8056
+2023-10-02 14:30:42,860 - INFO - Parameters
+ random forest: {'xgbclassifier__colsample_bytree': 0.8, 'xgbclassifier__learning_rate': 0.1, 'xgbclassifier__max_depth': 15, 'xgbclassifier__n_estimators': 50, 'xgbclassifier__subsample': 0.3}
+2023-10-02 14:30:42,860 - INFO - Parameters saved in: ../models/xgboost/xgboost_params.pkl
+2023-10-02 14:30:42,862 - INFO - Model saved in: ../models/xgboost/xgboost_model.pkl
+2023-10-02 14:30:42,930 - INFO - Train results saved in: ../data/results/xgboost/train_results.parquet
+2023-10-02 14:30:42,931 - INFO - Test results saved in: ../data/results/xgboost/test_results.parquet
+2023-10-02 14:44:14,362 - INFO - Fitted preprocessor saved in: ../models/xgboost/xgboost_preprocessor.pkl
+2023-10-02 14:44:14,363 - INFO - Training score 
+ random forest: 0.5980
+2023-10-02 14:44:14,363 - INFO - Test score
+ random forest: 0.5756
+2023-10-02 14:44:14,363 - INFO - Parameters
+ random forest: {'xgbclassifier__colsample_bytree': 0.8, 'xgbclassifier__learning_rate': 0.01, 'xgbclassifier__max_depth': 5, 'xgbclassifier__n_estimators': 35, 'xgbclassifier__subsample': 0.6}
+2023-10-02 14:44:14,363 - INFO - Parameters saved in: ../models/xgboost/xgboost_params.pkl
+2023-10-02 14:44:14,364 - INFO - Model saved in: ../models/xgboost/xgboost_model.pkl
+2023-10-02 14:44:14,422 - INFO - Train results saved in: ../data/results/xgboost/train_results.parquet
+2023-10-02 14:44:14,423 - INFO - Test results saved in: ../data/results/xgboost/test_results.parquet

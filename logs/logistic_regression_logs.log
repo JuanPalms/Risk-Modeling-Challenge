@@ -8,3 +8,75 @@
 2023-10-02 00:33:40,446 - INFO - Model saved in: ../models/logistic_regression/logistic_regression_model.pkl
 2023-10-02 00:33:40,479 - INFO - Train results saved in: ../data/results/logistic_regression/train_results.parquet
 2023-10-02 00:33:40,479 - INFO - Test results saved in: ../data/results/logistic_regression/test_results.parquet
+2023-10-02 01:00:07,120 - INFO - Training score 
+ logistic regression: 0.5463
+2023-10-02 01:00:07,120 - INFO - Test score
+ logistic regression: 0.5509
+2023-10-02 01:00:07,120 - INFO - Parameters
+ logistic regression: {'logisticregression__C': 0.2, 'logisticregression__solver': 'saga'}
+2023-10-02 01:00:07,120 - INFO - Parameters saved in: ../models/logistic_regression/logistic_regression_params.pkl
+2023-10-02 01:00:07,121 - INFO - Model saved in: ../models/logistic_regression/logistic_regression_model.pkl
+2023-10-02 01:00:07,150 - INFO - Train results saved in: ../data/results/logistic_regression/train_results.parquet
+2023-10-02 01:00:07,150 - INFO - Test results saved in: ../data/results/logistic_regression/test_results.parquet
+2023-10-02 01:04:46,082 - INFO - Training score 
+ logistic regression: 0.5463
+2023-10-02 01:04:46,082 - INFO - Test score
+ logistic regression: 0.5509
+2023-10-02 01:04:46,082 - INFO - Parameters
+ logistic regression: {'logisticregression__C': 0.2, 'logisticregression__solver': 'saga'}
+2023-10-02 01:04:46,082 - INFO - Parameters saved in: ../models/logistic_regression/logistic_regression_params.pkl
+2023-10-02 01:04:46,083 - INFO - Model saved in: ../models/logistic_regression/logistic_regression_model.pkl
+2023-10-02 01:04:46,114 - INFO - Train results saved in: ../data/results/logistic_regression/train_results.parquet
+2023-10-02 01:04:46,115 - INFO - Test results saved in: ../data/results/logistic_regression/test_results.parquet
+2023-10-02 01:12:36,738 - INFO - Training score 
+ logistic regression: 0.5461
+2023-10-02 01:12:36,738 - INFO - Test score
+ logistic regression: 0.5501
+2023-10-02 01:12:36,738 - INFO - Parameters
+ logistic regression: {'logisticregression__C': 0.5, 'logisticregression__solver': 'liblinear'}
+2023-10-02 01:12:36,738 - INFO - Parameters saved in: ../models/logistic_regression/logistic_regression_params.pkl
+2023-10-02 01:12:36,739 - INFO - Model saved in: ../models/logistic_regression/logistic_regression_model.pkl
+2023-10-02 01:12:36,770 - INFO - Train results saved in: ../data/results/logistic_regression/train_results.parquet
+2023-10-02 01:12:36,770 - INFO - Test results saved in: ../data/results/logistic_regression/test_results.parquet
+2023-10-02 01:14:20,162 - INFO - Training score 
+ logistic regression: 0.5461
+2023-10-02 01:14:20,162 - INFO - Test score
+ logistic regression: 0.5501
+2023-10-02 01:14:20,162 - INFO - Parameters
+ logistic regression: {'logisticregression__C': 0.5, 'logisticregression__solver': 'liblinear'}
+2023-10-02 01:14:20,166 - INFO - Parameters saved in: ../models/logistic_regression/logistic_regression_params.pkl
+2023-10-02 01:14:20,166 - INFO - Model saved in: ../models/logistic_regression/logistic_regression_model.pkl
+2023-10-02 01:14:20,198 - INFO - Train results saved in: ../data/results/logistic_regression/train_results.parquet
+2023-10-02 01:14:20,198 - INFO - Test results saved in: ../data/results/logistic_regression/test_results.parquet
+2023-10-02 14:46:29,531 - INFO - Training score 
+ logistic regression: 0.5568
+2023-10-02 14:46:29,587 - INFO - Test score
+ logistic regression: 0.5579
+2023-10-02 14:46:29,587 - INFO - Parameters
+ logistic regression: {'logisticregression__C': 0.4, 'logisticregression__solver': 'liblinear'}
+2023-10-02 14:46:29,587 - INFO - Parameters saved in: ../models/logistic_regression/logistic_regression_params.pkl
+2023-10-02 14:46:29,588 - INFO - Model saved in: ../models/logistic_regression/logistic_regression_model.pkl
+2023-10-02 14:46:29,620 - INFO - Train results saved in: ../data/results/logistic_regression/train_results.parquet
+2023-10-02 14:46:29,620 - INFO - Test results saved in: ../data/results/logistic_regression/test_results.parquet
+2023-10-02 14:47:21,261 - INFO - Fitted preprocessor saved in: ../models/random_forest/random_forest_preprocessor.pkl
+2023-10-02 14:47:21,261 - INFO - Training score 
+ random forest: 0.6583
+2023-10-02 14:47:21,261 - INFO - Test score
+ random forest: 0.5974
+2023-10-02 14:47:21,261 - INFO - Parameters
+ random forest: {'randomforestclassifier__max_depth': 10, 'randomforestclassifier__min_samples_leaf': 5, 'randomforestclassifier__n_estimators': 20}
+2023-10-02 14:47:21,261 - INFO - Parameters saved in: ../models/random_forest/random_forest_params.pkl
+2023-10-02 14:47:21,263 - INFO - Model saved in: ../models/random_forest/random_forest_model.pkl
+2023-10-02 14:47:21,332 - INFO - Train results saved in: ../data/results/random_forest/train_results.parquet
+2023-10-02 14:47:21,332 - INFO - Test results saved in: ../data/results/random_forest/test_results.parquet
+2023-10-02 14:52:34,644 - INFO - Fitted preprocessor saved in: ../models/xgboost/xgboost_preprocessor.pkl
+2023-10-02 14:52:34,644 - INFO - Training score 
+ random forest: 0.5980
+2023-10-02 14:52:34,644 - INFO - Test score
+ random forest: 0.5756
+2023-10-02 14:52:34,644 - INFO - Parameters
+ random forest: {'xgbclassifier__colsample_bytree': 0.8, 'xgbclassifier__learning_rate': 0.01, 'xgbclassifier__max_depth': 5, 'xgbclassifier__n_estimators': 35, 'xgbclassifier__subsample': 0.6}
+2023-10-02 14:52:34,644 - INFO - Parameters saved in: ../models/xgboost/xgboost_params.pkl
+2023-10-02 14:52:34,646 - INFO - Model saved in: ../models/xgboost/xgboost_model.pkl
+2023-10-02 14:52:34,701 - INFO - Train results saved in: ../data/results/xgboost/train_results.parquet
+2023-10-02 14:52:34,701 - INFO - Test results saved in: ../data/results/xgboost/test_results.parquet

@@ -1,0 +1,93 @@
+2023-10-02 10:38:07,327 - INFO - Training score 
+ random forest: 0.6826
+2023-10-02 10:38:07,327 - INFO - Test score
+ random forest: 0.6136
+2023-10-02 10:38:07,327 - INFO - Parameters
+ random forest: {'randomforestclassifier__max_depth': 10, 'randomforestclassifier__n_estimators': 50}
+2023-10-02 10:38:07,328 - INFO - Parameters saved in: ../models/random_forest/random_forest_params.pkl
+2023-10-02 10:38:07,330 - INFO - Model saved in: ../models/random_forest/random_forest_model.pkl
+2023-10-02 10:42:42,018 - INFO - Training score 
+ random forest: 0.6826
+2023-10-02 10:42:42,018 - INFO - Test score
+ random forest: 0.6136
+2023-10-02 10:42:42,018 - INFO - Parameters
+ random forest: {'randomforestclassifier__max_depth': 10, 'randomforestclassifier__n_estimators': 50}
+2023-10-02 10:42:42,018 - INFO - Parameters saved in: ../models/random_forest/random_forest_params.pkl
+2023-10-02 10:42:42,021 - INFO - Model saved in: ../models/random_forest/random_forest_model.pkl
+2023-10-02 10:42:42,137 - ERROR - Error saving results: Cannot save file into a non-existent directory: '../data/results/random_forest'
+2023-10-02 11:23:14,931 - INFO - Fitted preprocessor saved in: ../models/random_forest/random_forest_preprocessor.pkl
+2023-10-02 11:23:14,931 - INFO - Training score 
+ random forest: 0.6826
+2023-10-02 11:23:14,932 - INFO - Test score
+ random forest: 0.6136
+2023-10-02 11:23:14,932 - INFO - Parameters
+ random forest: {'randomforestclassifier__max_depth': 10, 'randomforestclassifier__n_estimators': 50}
+2023-10-02 11:23:14,932 - INFO - Parameters saved in: ../models/random_forest/random_forest_params.pkl
+2023-10-02 11:23:14,934 - INFO - Model saved in: ../models/random_forest/random_forest_model.pkl
+2023-10-02 11:23:15,047 - ERROR - Error saving results: Cannot save file into a non-existent directory: '../data/results/random_forest'
+2023-10-02 11:25:58,622 - INFO - Fitted preprocessor saved in: ../models/random_forest/random_forest_preprocessor.pkl
+2023-10-02 11:25:58,623 - INFO - Training score 
+ random forest: 0.6826
+2023-10-02 11:25:58,623 - INFO - Test score
+ random forest: 0.6136
+2023-10-02 11:25:58,623 - INFO - Parameters
+ random forest: {'randomforestclassifier__max_depth': 10, 'randomforestclassifier__n_estimators': 50}
+2023-10-02 11:25:58,623 - INFO - Parameters saved in: ../models/random_forest/random_forest_params.pkl
+2023-10-02 11:25:58,625 - INFO - Model saved in: ../models/random_forest/random_forest_model.pkl
+2023-10-02 11:25:58,749 - INFO - Train results saved in: ../data/results/random_forest/train_results.parquet
+2023-10-02 11:25:58,749 - INFO - Test results saved in: ../data/results/random_forest/test_results.parquet
+2023-10-02 12:18:19,528 - INFO - Fitted preprocessor saved in: ../models/random_forest/random_forest_preprocessor.pkl
+2023-10-02 12:18:19,529 - INFO - Training score 
+ random forest: 0.6674
+2023-10-02 12:18:19,529 - INFO - Test score
+ random forest: 0.6174
+2023-10-02 12:18:19,529 - INFO - Parameters
+ random forest: {'randomforestclassifier__max_depth': 10, 'randomforestclassifier__min_samples_leaf': 4, 'randomforestclassifier__min_samples_split': 2, 'randomforestclassifier__n_estimators': 30}
+2023-10-02 12:18:19,529 - INFO - Parameters saved in: ../models/random_forest/random_forest_params.pkl
+2023-10-02 12:18:19,532 - INFO - Model saved in: ../models/random_forest/random_forest_model.pkl
+2023-10-02 12:18:19,730 - INFO - Train results saved in: ../data/results/random_forest/train_results.parquet
+2023-10-02 12:18:19,730 - INFO - Test results saved in: ../data/results/random_forest/test_results.parquet
+2023-10-02 12:48:07,006 - INFO - Fitted preprocessor saved in: ../models/random_forest/random_forest_preprocessor.pkl
+2023-10-02 12:48:07,007 - INFO - Training score 
+ random forest: 0.7809
+2023-10-02 12:48:07,007 - INFO - Test score
+ random forest: 0.6715
+2023-10-02 12:48:07,007 - INFO - Parameters
+ random forest: {'randomforestclassifier__max_depth': 20, 'randomforestclassifier__min_samples_leaf': 6, 'randomforestclassifier__min_samples_split': 2, 'randomforestclassifier__n_estimators': 30}
+2023-10-02 12:48:07,007 - INFO - Parameters saved in: ../models/random_forest/random_forest_params.pkl
+2023-10-02 12:48:07,009 - INFO - Model saved in: ../models/random_forest/random_forest_model.pkl
+2023-10-02 12:48:07,134 - INFO - Train results saved in: ../data/results/random_forest/train_results.parquet
+2023-10-02 12:48:07,134 - INFO - Test results saved in: ../data/results/random_forest/test_results.parquet
+2023-10-02 12:51:49,723 - INFO - Fitted preprocessor saved in: ../models/random_forest/random_forest_preprocessor.pkl
+2023-10-02 12:51:49,723 - INFO - Training score 
+ random forest: 0.6781
+2023-10-02 12:51:49,723 - INFO - Test score
+ random forest: 0.6155
+2023-10-02 12:51:49,723 - INFO - Parameters
+ random forest: {'randomforestclassifier__max_depth': 10, 'randomforestclassifier__min_samples_leaf': 2, 'randomforestclassifier__n_estimators': 20}
+2023-10-02 12:51:49,723 - INFO - Parameters saved in: ../models/random_forest/random_forest_params.pkl
+2023-10-02 12:51:49,725 - INFO - Model saved in: ../models/random_forest/random_forest_model.pkl
+2023-10-02 12:51:49,791 - INFO - Train results saved in: ../data/results/random_forest/train_results.parquet
+2023-10-02 12:51:49,791 - INFO - Test results saved in: ../data/results/random_forest/test_results.parquet
+2023-10-02 12:55:59,296 - INFO - Fitted preprocessor saved in: ../models/random_forest/random_forest_preprocessor.pkl
+2023-10-02 12:55:59,296 - INFO - Training score 
+ random forest: 0.6781
+2023-10-02 12:55:59,296 - INFO - Test score
+ random forest: 0.6155
+2023-10-02 12:55:59,296 - INFO - Parameters
+ random forest: {'randomforestclassifier__max_depth': 10, 'randomforestclassifier__min_samples_leaf': 2, 'randomforestclassifier__n_estimators': 20}
+2023-10-02 12:55:59,296 - INFO - Parameters saved in: ../models/random_forest/random_forest_params.pkl
+2023-10-02 12:55:59,297 - INFO - Model saved in: ../models/random_forest/random_forest_model.pkl
+2023-10-02 12:55:59,364 - INFO - Train results saved in: ../data/results/random_forest/train_results.parquet
+2023-10-02 12:55:59,365 - INFO - Test results saved in: ../data/results/random_forest/test_results.parquet
+2023-10-02 12:57:42,718 - INFO - Fitted preprocessor saved in: ../models/random_forest/random_forest_preprocessor.pkl
+2023-10-02 12:57:42,718 - INFO - Training score 
+ random forest: 0.6602
+2023-10-02 12:57:42,719 - INFO - Test score
+ random forest: 0.6078
+2023-10-02 12:57:42,719 - INFO - Parameters
+ random forest: {'randomforestclassifier__max_depth': 10, 'randomforestclassifier__min_samples_leaf': 3, 'randomforestclassifier__n_estimators': 20}
+2023-10-02 12:57:42,719 - INFO - Parameters saved in: ../models/random_forest/random_forest_params.pkl
+2023-10-02 12:57:42,720 - INFO - Model saved in: ../models/random_forest/random_forest_model.pkl
+2023-10-02 12:57:42,787 - INFO - Train results saved in: ../data/results/random_forest/train_results.parquet
+2023-10-02 12:57:42,787 - INFO - Test results saved in: ../data/results/random_forest/test_results.parquet
