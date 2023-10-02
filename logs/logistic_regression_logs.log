@@ -1,0 +1,10 @@
+2023-10-02 00:33:40,445 - INFO - Training score 
+ logistic regression: 0.5463
+2023-10-02 00:33:40,445 - INFO - Test score
+ logistic regression: 0.5509
+2023-10-02 00:33:40,445 - INFO - Parameters
+ logistic regression: {'logisticregression__C': 0.2, 'logisticregression__solver': 'saga'}
+2023-10-02 00:33:40,445 - INFO - Parameters saved in: ../models/logistic_regression/logistic_regression_params.pkl
+2023-10-02 00:33:40,446 - INFO - Model saved in: ../models/logistic_regression/logistic_regression_model.pkl
+2023-10-02 00:33:40,479 - INFO - Train results saved in: ../data/results/logistic_regression/train_results.parquet
+2023-10-02 00:33:40,479 - INFO - Test results saved in: ../data/results/logistic_regression/test_results.parquet

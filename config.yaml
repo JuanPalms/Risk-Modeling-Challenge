@@ -11,7 +11,7 @@ results:
     tables: "../results/tables"
 
 logging:
-    training: "../logs/training_logs.log"
+    logistic_regression: "../logs/logistic_regression_logs.log"
 
 models:
     logistic_regression:
