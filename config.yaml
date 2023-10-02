@@ -5,6 +5,9 @@ data:
     data_clean: "../data/clean"
     results:
         logistic_regression: "../data/results/logistic_regression"
+        random_forest: "../data/results/random_forest"
+        xgboost: "../data/results/xgboost"
+
 
 results:
     graphs: "../results/graphs"
@@ -12,6 +15,9 @@ results:
 
 logging:
     logistic_regression: "../logs/logistic_regression_logs.log"
+    random_forest: "../logs/random_forest_logs.log"
+    xgboost: "../logs/xgboost_logs.log"
+
 
 models:
     logistic_regression:
@@ -19,13 +25,21 @@ models:
         params:  "../models/logistic_regression/logistic_regression_params.pkl"
         model:   "../models/logistic_regression/logistic_regression_model.pkl"
     random_forest:
-        preprocessor: "../models/logistic_regression/random_forest_preprocessor.pkl"
+        preprocessor: "../models/random_forest/random_forest_preprocessor.pkl"
         params:  "../models/random_forest/random_forest_params.pkl"
         model:   "../models/random_forest/random_forest_model.pkl"
-    xg_boost:
-        preprocessor: "../models/logistic_regression/xgboost_preprocessor.pkl"
+    xgboost:
+        preprocessor: "../models/xgboost/xgboost_preprocessor.pkl"
         params:  "../models/xgboost/xgboost_params.pkl"
         model:   "../models/xgboost/xgboost_model.pkl"
+
+
+## Variables
+variables:
+    categorical: ["LOAN_TERM_MONTHLY",'APPLICATION_MONTH', 'APPLICATION_YEAR']
+    numerical : ['BALANCE_DUE', 'CREDIT_LIMIT', 'FINANCED_AMOUNT',
+             'account_to_application_days', 'n_sf_apps',
+             'n_bnpl_apps','n_inquiries_l3m' ]
 
 
 ## Colors:

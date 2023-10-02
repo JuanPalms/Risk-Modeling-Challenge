@@ -9,6 +9,9 @@ import sys
 import matplotlib.pyplot as plt
 import six
 import pickle
+import pyarrow
+from sklearn.model_selection import train_test_split
+
 
 current_dir = os.getcwd()
 parent_dir = os.path.dirname(current_dir)
@@ -34,6 +37,75 @@ def load_pickle(filename):
     with open(filename, 'rb') as file:
             loaded_file = pickle.load(file)
     return loaded_file
+
+
+def prepare_data_for_modeling():
+    """
+    Prepares data for modeling by loading, splitting and saving training/test datasets.
+    
+    Parameters:
+    - model_name (str): Name of the model for logging purposes.
+    
+    Returns:
+    - X_train, X_test, y_train, y_test: Split datasets.
+    """
+    try:
+        data = pd.read_parquet(os.path.join(config_f["data"]["data_clean"], "datos.parquet"), engine="pyarrow")
+    except Exception as e:
+        logging.error(f"Error in loading data: {e}")
+        sys.exit(1)
+
+    y = data["target"]
+    X = data.drop(columns=["target"], axis=1)
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
+
+    train_df = pd.concat([X_train, y_train], axis=1).to_parquet(os.path.join(config_f['data']['data_clean'], 'datos_train.parquet'), engine="pyarrow", compression=None)
+    test_df = pd.concat([X_test, y_test], axis=1).to_parquet(os.path.join(config_f['data']['data_clean'], 'datos_test.parquet'), engine="pyarrow", compression=None)
+    
+    categorical = config_f['variables']['categorical']
+    numerical = config_f['variables']['numerical']
+    
+    return X_train, X_test, y_train, y_test, categorical, numerical
+
+
+#### Useful functions for all the models
+
+def get_predictions_and_probabilities(model, X):
+    """
+    Retrieve class predictions and their associated probabilities for the positive class.
+    
+    Parameters:
+    - model (estimator): Trained scikit-learn model or similar with a predict() and predict_proba() methods.
+    - X (pd.DataFrame or array-like): Dataset to predict on.
+    
+    Returns:
+    - tuple: Predicted classes and associated probabilities.
+    """
+    predictions = model.predict(X)
+    probabilities = model.predict_proba(X)[:, 1]
+    return predictions, probabilities
+
+def create_results_dataframe(X, actual_target, predicted_target, predicted_probability):
+    """
+    Construct a results dataframe appending actual targets, predicted targets, and predicted probabilities.
+    
+    Parameters:
+    - X (pd.DataFrame): Original dataset without target column.
+    - actual_target (array-like): True target values.
+    - predicted_target (array-like): Predicted class labels.
+    - predicted_probability (array-like): Predicted probabilities for the positive class.
+    
+    Returns:
+    - pd.DataFrame: Extended dataframe with prediction results.
+    """
+    results_df = X.copy()
+    results_df['actual_target'] = actual_target
+    results_df['predicted_target'] = predicted_target
+    results_df['predicted_probability'] = predicted_probability
+    return results_df
+
+
         
 def render_mpl_table(data, col_width=3.0, row_height=1, font_size=16,font_size_rows=16,
                      header_color=config_f['colors']['gris'], row_colors=['#f1f1f2', 'w'], edge_color='w',
@@ -90,5 +162,3 @@ def render_mpl_table(data, col_width=3.0, row_height=1, font_size=16,font_size_r
                                  f'{title}.png'), 
                     bbox_inches='tight', pad_inches=0)
     plt.show()
-
-    

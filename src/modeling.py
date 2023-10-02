@@ -60,6 +60,7 @@ def get_metrics(model):
         cm_dict[key] = cm
 
     metrics_df = pd.DataFrame(metrics_data).transpose()
+    metrics_df['Set'] = metrics_df.index
 
     return metrics_df, cm_dict
 
