@@ -92,3 +92,5 @@ Below are some of the key results:
 Logistic Regression:
 
 ![Confussion matrix train set](https://github.com/JuanPalms/Risk-Modeling-Challenge/blob/main/results/graphs/Confussion%20Matrix%0A%20Logistic%20regression%3A%20Test%20set.png)
+
+![Evaluation metrics: Logistic regression](https://github.com/JuanPalms/Risk-Modeling-Challenge/blob/main/results/tables/Evaluation%20metrics.png)
