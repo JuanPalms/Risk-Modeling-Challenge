@@ -21,5 +21,6 @@ dependencies:
   - pip
   - streamlit
   - imbalanced-learn
+  - flask
   - pip:
     - pickle5
